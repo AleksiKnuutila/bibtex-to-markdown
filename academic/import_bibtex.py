@@ -134,7 +134,7 @@ def parse_bibtex_entry(
 
     if authors:
         authors = clean_bibtex_authors([i.strip() for i in authors.replace("\n", " ").split(" and ")])
-        page.fm["authors"] = authors
+        page.fm["author"] = authors
 
     pubtype = PUB_TYPES.get(entry["ENTRYTYPE"], PublicationType.Uncategorized)
     page.fm["publication_types"] = [str(pubtype.value)]
